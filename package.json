@@ -7,19 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:eslint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --check .",
-    "format:fix": "prettier --write --list-different .",
+    "lint:eslint": "eslint '**/*.{tsx,jsx}'",
+    "lint:fix": "eslint '**/*.{tsx,jsx}' --fix",
+    "format": "prettier --check '**/*.{tsx,jsx}'",
+    "format:fix": "prettier --write '**/*.{tsx,jsx}'",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "git add .",
-      "npm run format",
-      "npm run lint:fix",
-      "npm run format:fix",
-      "npm run lint:eslint"
+    "*.{jsx,tsx}": [
+      "git add ."
     ]
   },
   "husky": {
