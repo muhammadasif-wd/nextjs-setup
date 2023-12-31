@@ -14,7 +14,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{jsx, tsx}": [
+    "*.{js,ts,tsx}": [
       "git add .",
       "npm run format",
       "npm run lint:fix",
