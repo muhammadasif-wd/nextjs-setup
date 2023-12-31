@@ -9,15 +9,17 @@
     "lint": "next lint",
     "lint:eslint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write --list-different .",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "npm run lint:eslint",
-      "npm run lint:fix",
+    "*.{tsx}": [
+      "git add .",
       "npm run format",
-      "git add"
+      "npm run lint:fix",
+      "npm run format:fix",
+      "npm run lint:eslint"
     ]
   },
   "husky": {

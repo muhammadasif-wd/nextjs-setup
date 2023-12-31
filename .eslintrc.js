@@ -1,14 +1,10 @@
 module.exports = {
-    parser: '@typescript-eslint/parser',
-    extends: [
-        'next',
-        'next/core-web-vitals',
-        'plugin:@typescript-eslint/recommended',
-        'prettier',
-        'prettier/@typescript-eslint',
+    "extends": [
+        "next/core-web-vitals",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
-    plugins: ['@typescript-eslint', 'prettier'],
-    rules: {
-        'prettier/prettier': 'error',
-    },
-};
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "root": true
+}
